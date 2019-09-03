@@ -1,0 +1,191 @@
+﻿
+
+
+/* ---- .element-item ---- */
+
+.element-item {
+  position: relative;
+  float: left;
+  width: 33.33333%;
+  padding: 10px;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+/*********************列表*********************/
+section.main .grid {font-size: 0;}
+section.main .grid li { position: relative; font-size: 1.3rem; display: block; float: left; vertical-align: top; margin-bottom: 1rem;}
+section.main .grid li a { 
+  min-height: 245px; 
+  color: #000; 
+  text-align: center; 
+  display: block; 
+  padding-bottom: 15px; 
+  transition: box-shadow .3s; 
+  box-shadow: 0 4px 10px 0 rgba(35,45,60,.12);
+  border-radius: 10px;
+}
+section.main .grid li a:hover {box-shadow: 0 4px 30px 0 rgba(35,45,60,.16);}
+section.main .grid li a figure {height: 0; padding-top: 56%; position: relative; overflow: hidden;}
+section.main .grid li a figure picture {position: absolute; top: 0; left: 0;}
+section.main .grid li a img {
+    display: block; margin-bottom: 2rem;
+    -o-transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    transition: all .15s linear;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+section.main .grid li a:hover img {opacity: .8;}
+section.main .grid li a h2 {font-weight: normal; margin-bottom: .5rem; margin-top: 1rem; min-height: 30px;}
+section.main .grid li a i {font-size: 95%; opacity: .3; font-style: initial;}
+
+.button-group {
+    text-align: center; 
+    font-size: 0;
+    margin-bottom: 25px; 
+    padding: 10px; 
+    border: 1px solid rgba(0,0,0,.1); 
+    border-radius: 100px; 
+    position: relative; 
+    z-index: 999;
+    background-color: hsla(0,0%,100%,.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+.button-groupAnchor.heightFill {height: 70px;}
+.button-group.fixed {position: fixed; left: 0; right: 0; margin: 0 3rem; padding: .5rem; transition: box-shadow .3s; box-shadow: 0 1px 5px 0 rgba(35,45,60,.12);}
+.button-group .button {display: inline-block; font-size: 1.5rem; opacity: .3; color: #000000; border: 0; background: none; margin: 0 0.2rem; cursor: pointer;}
+.button-group.fixed .button {font-size: 1.4rem;}
+.button:hover,
+.button:active,
+.button.is-checked,
+.button.is-checked {
+  opacity: 1;
+}
+.button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/*********************內頁*********************/
+.aboutPage {background: #F6F6F6;}
+.aboutPage .hd, .aboutPage .photo {float: left; width: 80%;}
+.aboutPage .photo {width: 20%;}
+.aboutPage .photo img {width: 100%; border-radius: 50%;}
+.aboutPage .hd {padding-left: 3rem;}
+.aboutPage .hd h1 {margin-bottom: .5rem;}
+.aboutPage .hd i {font-style: initial; font-size: 1.6rem; margin-bottom: 3rem; display: block; opacity: .6;}
+.aboutPage .hd > article {margin-bottom: 3rem;}
+.aboutPage .hd > article strong {margin-bottom: 1.5rem; display: block;}
+.aboutPage .hd > article p {margin-bottom: 2rem; color: #000000; font-size: 1.4rem;}
+.aboutPage .contact p {margin-bottom: 10px;}
+.column dl {text-align: center;}
+.column dl dd {font-size: 1.3rem; margin-bottom: 2rem; text-align: center; padding: 0 1rem; width: 14.285%;}
+.column dl dd .graph {margin-bottom: .5rem;}
+.column dl dd .graph > div {margin: 0 auto;}
+.timetable, .timetable dl {position: relative;}
+.timetable dl {padding-bottom: 40px; font-size: 0;}
+.timetable dl:before, .timetable dl dd u:before, .timetable dl dd .content:before {display: block; content: ""; position: absolute;}
+.timetable dl:before {
+    position: absolute;    
+    width: 100%;
+    height: 6px;
+    border-radius: 15px;
+    background: #979797;
+    bottom: 20px;
+    font-size: 0;
+}
+.timetable dl dd {position: relative; display: inline-block; width: 25%; padding: 0 2rem;}
+.timetable dl dd u {display: block; position: absolute; bottom: -48px; left: 4px; text-decoration: none; font-size: 1.4rem; padding-top: 24px;}
+.timetable dl dd u:before {
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  top: 0px;
+  left: 50%;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255, 1);
+}
+.timetable dl dd .content {position: relative; padding-left: 15px;}
+.timetable dl dd .content:before {width: 1px; height: calc(100% + 20px); background: #000000; left: 0; top: 0; z-index: -1;}
+.timetable dl dd strong, .timetable dl dd i {display: block; margin-bottom: 5px;}
+.timetable dl dd strong {font-weight: 600; font-size: 1.6rem;}
+.timetable dl dd i {font-size: 1.2rem; color: #AAAAAA; font-style: normal;}
+.timetable dl dd p {font-size: 1.3rem;}
+.timetable.oneFifth dl dd {width: 20%;}
+
+
+.main_inner h2 {text-align: center; font-weight: 300; text-transform: uppercase; font-size: 2.5rem; margin-bottom: 5rem;}
+
+.instagram .content {height: 600px; position: relative; overflow: hidden; max-width: 800px; margin: 0 auto;}
+.instagram .content iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+.gallery li {margin: 0 0 1rem;}
+
+.contentPage p {margin-bottom: 5rem; line-height: 180%;}
+.contentPage p a:hover {text-decoration: underline;}
+
+.sectionPdng {padding: 5rem;}
+.bg_grey {background: #F6F6F6;}
+
+.app001 .tableStructure {max-width: 768px; margin: 0 auto;}
+.app001 .tableStructure .col:first-child {width: 70%;}
+.app001 .tableStructure .col:nth-child(2) {width: 30%;}
+
+/*lightbox*/
+.lightboxPage {padding-top: 4rem;}
+.lightboxPage > article > header {padding: 6rem; text-align: center;}
+.lightboxPage > article > header .topic {margin-bottom: 3rem;}
+.lightboxPage h1 {font-weight: 300; font-size: 3rem; margin-bottom: 1rem;}
+.lightboxPage > article > header i {display: block; font-size: 1.7rem; font-weight: 300; font-style: initial; margin-bottom: 1rem;}
+
+/*.lightboxPage figure {padding: 6rem;}
+.lightboxPage figure.odd {background: #F6F6F6;}*/
+
+.lightboxPage figure img {width: 100%;}
+
+.tableStructure.oneForth figure {padding: 16px;}
+.tableStructure.oneForth figure picture img{
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.17);
+  -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.17);
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.17);
+}
+
+
+
+
+.footInfo > div {float: right;}
+.footInfo > div * {display: inline-block; vertical-align: middle;}
+.backToPrev {position: relative; text-indent: -9999rem; width: 34px; height: 34px;}
+.backToPrev a {width: 100%; height: 100%; display: block;}
+.backToPrev:before, .backToPrev:after, .backToPrev a:before, .backToPrev a:after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #000000;
+    border-radius: 50%;
+    opacity: .3;
+}
+.backToPrev:before {left: 0; top: 0;}
+.backToPrev:after {right: 0; top: 0;}
+.backToPrev a:before {left: 0; bottom: 0;}
+.backToPrev a:after {right: 0; bottom: 0;}
+.date {font-size: 2rem; font-weight: 700; opacity: .3; margin-left: 2rem;}
