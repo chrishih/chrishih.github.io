@@ -192,6 +192,8 @@ p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-w
 .col-l {float: left;}
 .col-r {float: right;}
 .btm_100p {margin-bottom: 100px;}
+.alignCenter {text-align: center;}
+
 .tableStructure {display: table; width: 100%;}
 .tableStructure .col {display: table-cell; vertical-align: top;}
 .tableStructure.vCenter .col {vertical-align: middle;}
@@ -200,7 +202,7 @@ p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-w
 .tableStructure.wImg .Img img{ width: 100%; border-radius: 10px;}
 .tableStructure.imgTitle b {text-align: center; font-weight: 300; font-size: 1.4rem; display: block;}
 .tableStructure.oneForth {display: flex;}
-.tableStructure.oneForth .col {display: block;}
+.tableStructure.oneForth .col {display: inline-block;}
 
 .tableCenter {display: table; width: 100%;}
 .tableCenter > div {display: table-cell; text-align: center;}
@@ -379,7 +381,7 @@ section.main {padding: 5rem; padding-top: 0; min-height: 70vh;}
 .wrapper { width: 85%; margin: 0 auto; transition: max-width 0.4s ease-in-out;}
 .wrapper_thin {max-width: 650px;}
 .wrapper_wide {max-width: 800px;}
-.sec_tall {padding: 6rem 0;}
+.sec_tall {padding: 5rem 0;}
 
 .column dl {font-size: 0;}
 .column dl dd {font-size: 1.6rem; display: inline-block; vertical-align: top;}

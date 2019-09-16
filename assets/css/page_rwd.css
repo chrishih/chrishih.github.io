@@ -35,7 +35,9 @@
     -webkit-overflow-scrolling: touch;
    }
    .tableStructure.oneForth .col {
-    min-width: 205px;
+    /*min-width: 205px;*/
+    min-width: auto;
+    width: 50%;
    }
 
 }
@@ -47,7 +49,9 @@
    .aboutPage .hd, .aboutPage .photo {float: none; width: 100%;}
    .aboutPage .hd {padding-left: 0; text-align: center;}
    .aboutPage .photo {width: 40%; margin: 0 auto 3rem;}
-   .main_inner h2 {font-size: 1.7rem;}
+   .main_inner h2 {font-size: 2rem; margin-bottom: 4rem;}
+
+   .main_inner h3 {font-size: 1.7rem;}
 
    .timetable dl {padding-bottom: 0; padding-left: 40px;}
    .timetable dl:before { height: 100%; width: 6px; bottom: auto; top: 0;}
@@ -61,7 +65,7 @@
    section.main .grid li {margin-bottom: 1.5rem;}
    section.main .grid li a {}
 
-   .sectionPdng {padding: 3rem;}
+   .sectionPdng {padding: 5rem 3rem;}
 
 
    #preview_1 {position: relative; overflow-x: auto;}

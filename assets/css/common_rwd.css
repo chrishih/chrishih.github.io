@@ -41,7 +41,7 @@
         padding: 1rem;
     }
 
-    .tableStructure.oneForth {display: block;}
+    .tableStructure.oneForth {display: block; font-size: 0;}
 }
 
 @media screen and (max-width: 640px) {
