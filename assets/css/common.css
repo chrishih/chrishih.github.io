@@ -64,6 +64,14 @@ a:hover {
     transition: all .15s linear;
 }
 a strong {font-weight: 300;}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e4e4e4;
+    margin: 1em 0;
+    padding: 0;
+}
 img {
     max-width: 100%;
 }
@@ -187,7 +195,7 @@ select:focus {
     /* border: 1px solid rgba(81, 203, 238, 1); */
 }
 
-p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; font-weight: 300;}
+p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; /*20200620改行高*/ line-height: 1.8; font-weight: 300;}
 /******************************通用**************************************/
 .col-l {float: left;}
 .col-r {float: right;}
@@ -385,6 +393,25 @@ section.main {padding: 5rem; padding-top: 0; min-height: 70vh;}
 
 .column dl {font-size: 0;}
 .column dl dd {font-size: 1.6rem; display: inline-block; vertical-align: top;}
+
+.backToPrev_head {
+    position: relative;
+    padding: 16px 40px;
+    display: block;
+    font-size: 1.8rem;
+}
+.backToPrev_head:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: no-repeat center/contain;
+    background-image: url(../images/icon-back.svg);
+    transform: translateY(-50%);
+}
 
 /*footer*/
 footer {
