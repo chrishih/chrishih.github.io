@@ -74,6 +74,7 @@ hr {
 }
 img {
     max-width: 100%;
+    display: block;
 }
 input {
     font-family: sans-serif;
@@ -222,6 +223,8 @@ p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; /*2020
 .mContent-contArea ol li { margin-bottom: 1rem;}
 
 .fullWidth {width: 100% !important;}
+
+.fullpageimg img {width: 100%;}
 
 hr.hr_1 {margin: 5rem 0;}
 .marginBtm_30 {margin-bottom: 3rem;}
@@ -395,10 +398,14 @@ section.main {padding: 5rem; padding-top: 0; min-height: 70vh;}
 .column dl dd {font-size: 1.6rem; display: inline-block; vertical-align: top;}
 
 .backToPrev_head {
-    position: relative;
+    position: absolute;
     padding: 16px 40px;
     display: block;
     font-size: 1.8rem;
+    opacity: .3;
+}
+.backToPrev_head:hover {
+    opacity: 1;
 }
 .backToPrev_head:before {
     display: block;
