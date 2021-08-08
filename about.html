@@ -85,20 +85,8 @@
                         <div class="column skills" id="graphWrap">
                             <dl>
                                 <dd>
-                                    <div class="graph" id="photoshop"> </div>
-                                    <b>Photoshop</b>
-                                </dd>
-                                <dd>
-                                    <div class="graph" id="illustrator"> </div>
-                                    <b>Illustrator</b>
-                                </dd>
-                                <!-- <dd>
-                                    <div class="graph" id="dreamweaver"> </div>
-                                    <b>Dreamweaver</b>
-                                </dd> -->
-                                <dd>
-                                    <div class="graph" id="premiere"> </div>
-                                    <b>Premiere</b>
+                                    <div class="graph" id="figma"> </div>
+                                    <b>Figma</b>
                                 </dd>
                                 <dd>
                                     <div class="graph" id="sketch"> </div>
@@ -111,6 +99,14 @@
                                 <dd>
                                     <div class="graph" id="jquery"> </div>
                                     <b>jquery</b>
+                                </dd>
+                                <dd>
+                                    <div class="graph" id="photoshop"> </div>
+                                    <b>Photoshop</b>
+                                </dd>
+                                <dd>
+                                    <div class="graph" id="illustrator"> </div>
+                                    <b>Illustrator</b>
                                 </dd>
                             </dl>
                         </div>
@@ -152,7 +148,7 @@
                                     <u>2017</u>
                                     <div class="content">
                                         <strong>udn</strong>
-                                        <i>2017-2019</i>
+                                        <i>2017-2021</i>
                                         <p>App UI視覺設計，UX規劃與網頁製作等事務。</p>
                                     </div>
                                 </dd>
@@ -316,13 +312,13 @@
         //     dnCounterClockwise: false,
         // });
 
-        var premiereData = [
-            {value:65,color:"#000000"},
-            {value:100-65,color:"#F6F6F6"}
+        var figmaData = [
+            {value:85,color:"#000000"},
+            {value:100-85,color:"#F6F6F6"}
         ];
 
-        $( "#premiere" ).doughnutit({
-            dnData: premiereData,
+        $( "#figma" ).doughnutit({
+            dnData: figmaData,
             dnSize: 85,
             dnInnerCutout: 85,
             dnAnimation: true,
@@ -333,14 +329,14 @@
             dnFontSize: '30px',
             dnFontOffset: 15,
             dnFontColor: "#BBBBBB",
-            dnText: 'Pr',
+            dnText: 'Fg',
             dnStartAngle: -90,
             dnCounterClockwise: false,
         });
 
         var sketchData = [
-            {value:75,color:"#000000"},
-            {value:100-75,color:"#F6F6F6"}
+            {value:80,color:"#000000"},
+            {value:100-80,color:"#F6F6F6"}
         ];
 
         $( "#sketch" ).doughnutit({
