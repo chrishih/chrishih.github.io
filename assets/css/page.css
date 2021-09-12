@@ -280,7 +280,7 @@ img {
 
 .column {
 	padding: 0 1em;
-  width: 91.66666666666666%;
+  width: 89.66666666666666%;
 }
 
 .column:first-child {
@@ -290,7 +290,7 @@ img {
 
 .column:last-child {
 	padding-right: 0;
-  width: 45.833333333333336%;
+  width: 47.833333333333336%;
 }
 
 .table_of_contents-item {
