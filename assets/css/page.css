@@ -442,7 +442,7 @@ time {
 	max-width: 1.2em;
 	max-height: 1.2em;
 	text-decoration: none;
-	vertical-align: text-bottom;
+	vertical-align: baseline;
 	margin-right: 0.5em;
 }
 
