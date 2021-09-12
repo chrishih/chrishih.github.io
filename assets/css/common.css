@@ -12,6 +12,7 @@ body {
     color: #2e3233;
     overflow-x: hidden;
     overflow-y: hidden;
+    letter-spacing: .5px;
     /*opacity: 0;
     visibility: hidden;*/
 }
@@ -196,7 +197,7 @@ select:focus {
     /* border: 1px solid rgba(81, 203, 238, 1); */
 }
 
-p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; /*20200620改行高*/ line-height: 1.8; font-weight: 300;}
+p { display: block; font-size: 15px; font-size: 1.5rem; line-height: 1.5; /*20200620改行高*/ line-height: 1.65;}
 /******************************通用**************************************/
 .col-l {float: left;}
 .col-r {float: right;}

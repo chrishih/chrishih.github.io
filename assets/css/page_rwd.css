@@ -11,6 +11,7 @@
 
 }
 
+
 @media screen and (max-width: 1280px) {
     
 }
@@ -40,6 +41,10 @@
     width: 50%;
    }
 
+    .column-list { flex-direction: column;}
+    .column:first-child {padding: 0 1em;}
+    .column, .column:first-child, .column:last-child {width: 100%;}
+
 }
 
 @media screen and (max-width: 640px) {
@@ -49,7 +54,7 @@
    .aboutPage .hd, .aboutPage .photo {float: none; width: 100%;}
    .aboutPage .hd {padding-left: 0; text-align: center;}
    .aboutPage .photo {width: 40%; margin: 0 auto 3rem;}
-   .main_inner h2 {font-size: 2rem; margin-bottom: 4rem;}
+   .main_inner h2 {font-size: 2rem; margin-bottom: 2rem;}
 
    .main_inner h3 {font-size: 1.7rem;}
 
