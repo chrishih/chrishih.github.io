@@ -377,7 +377,7 @@ th {
 }
 
 .aboutPage2 ul {
-	padding-inline-start: 1.7em;
+	padding-inline-start: .5em;
 }
 
 .aboutPage2 ul>li {
@@ -386,7 +386,7 @@ th {
 }
 
 .aboutPage2 ol {
-	padding-inline-start: 1.6em;
+	padding-inline-start: .5em;
 }
 
 .aboutPage2 ol>li {
