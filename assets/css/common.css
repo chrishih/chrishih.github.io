@@ -238,7 +238,7 @@ hr.hr_1 {margin: 5rem 0;}
 table {line-height: 180%;}
 
 .btnStyle_1 {
-    display: inline-block; padding: 8px 40px; position: relative; background: #000000; color: #ffffff; font-weight: 300; font-size: 1.4rem; border-radius: 30px;
+    display: inline-block; padding: 8px 16px; position: relative; background: #000000; color: #ffffff; font-weight: 300; font-size: 1.4rem; border-radius: 30px;
 }
 .btnStyle_1.wIcon {padding-right: 45px;}
 .btnStyle_1.wIcon:before {
