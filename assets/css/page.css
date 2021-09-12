@@ -377,7 +377,7 @@ th {
 }
 
 .aboutPage2 ul {
-	padding-inline-start: .5em;
+	padding-inline-start: 1.5em;
 }
 
 .aboutPage2 ul>li {
@@ -386,22 +386,22 @@ th {
 }
 
 .aboutPage2 ol {
-	padding-inline-start: .5em;
+	padding-inline-start: 1.5em;
 }
 
 .aboutPage2 ol>li {
 	padding-left: 0.2em;
 }
 
-.mono ol {
+.aboutPage2 .mono ol {
 	padding-inline-start: 2em;
 }
 
-.mono ol>li {
+.aboutPage2 .mono ol>li {
 	text-indent: -0.4em;
 }
 
-.toggle {
+.aboutPage2 .toggle {
 	padding-inline-start: 0em;
 	list-style-type: none;
 }
