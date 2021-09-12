@@ -343,27 +343,27 @@ th {
 	color: rgba(55, 53, 47, 0.6);
 }
 
-ol,
-ul {
+.aboutPage2 ol,
+.aboutPage2 ul {
 	margin: 0;
 	margin-block-start: 0.6em;
 	margin-block-end: 0.6em;
 }
 
-li>ol:first-child,
-li>ul:first-child {
+.aboutPage2 li>ol:first-child,
+.aboutPage2 li>ul:first-child {
 	margin-block-start: 0.6em;
 }
 
-ul>li {
+.aboutPage2 ul>li {
 	list-style: disc;
 }
 
-ul.to-do-list {
+.aboutPage2 ul.to-do-list {
 	text-indent: -1.7em;
 }
 
-ul.to-do-list>li {
+.aboutPage2 ul.to-do-list>li {
 	list-style: none;
 }
 
@@ -372,24 +372,24 @@ ul.to-do-list>li {
 	opacity: 0.375;
 }
 
-ul.toggle>li {
+.aboutPage2 ul.toggle>li {
 	list-style: none;
 }
 
-ul {
+.aboutPage2 ul {
 	padding-inline-start: 1.7em;
 }
 
-ul>li {
+.aboutPage2 ul>li {
 	padding-left: 0.1em;
   font-size: 1.5rem;
 }
 
-ol {
+.aboutPage2 ol {
 	padding-inline-start: 1.6em;
 }
 
-ol>li {
+.aboutPage2 ol>li {
 	padding-left: 0.2em;
 }
 
