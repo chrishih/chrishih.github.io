@@ -197,7 +197,7 @@ section.main .grid li a i {font-size: 95%; opacity: .3; font-style: initial;}
 
 /* 關於我 from Notion*/
 
-.aboutPage2 {max-width: 1024px;}
+.aboutPage2 {max-width: 1024px; margin: auto;}
 .aboutPage2 h2 {text-align: left; margin-bottom: 2rem; text-transform: capitalize; font-weight: 800;}
 
 .aboutPage2 h3 {margin-top: 2.5rem; font-weight: 800;}
