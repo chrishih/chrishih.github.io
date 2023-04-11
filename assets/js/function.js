@@ -12,7 +12,7 @@ $(function(){
 
     var w = $(window).width();
 
-    /**************scrolltoTop**************/
+    /**************scrolltoTop 目前只用在首頁**************/
     $(window).scroll(function () {
         var s = $(this).scrollTop();
         var m = 300;
@@ -175,6 +175,10 @@ $(function(){
 
 
     });
+
+    // 共用
+    $("#header-placeholder").load("../template/header_inner.html");
+    $("#footer-placeholder").load("../template/footer.html");
 
 
 

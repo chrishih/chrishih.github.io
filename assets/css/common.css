@@ -287,11 +287,12 @@ table {line-height: 180%;}
 /******************************通用 end**********************************/
 
 /*header*/
-.bodyHeader {
+.bodyHeader, .bodyHeader_inner {
     padding: 3rem;
     margin: 0 0 2rem;
 }
-.bodyHeader .wrapper {
+.bodyHeader_inner {margin: 0;}
+.bodyHeader .wrapper, .bodyHeader_inner .wrapper {
     z-index: 10;
     position: relative;
 
@@ -307,6 +308,7 @@ h1.logo a, strong.logo a {display: block; text-indent: -9999rem; margin: 0 auto;
 nav.mainNav ul {position: relative; font-size: 0; text-align: center; display: flex; flex-wrap: nowrap; justify-content: center;}
 nav.mainNav li {padding: 0 1rem;}
 nav.mainNav li a {color: #000; opacity: .3; font-size: 1.6rem; position: relative;}
+.bodyHeader_inner nav.mainNav li a {opacity: .6;}
 nav.mainNav li.current a, nav.mainNav li a:hover {opacity: 1;}
 nav.mainNav li.current a:before {
     position: absolute;
@@ -318,7 +320,7 @@ nav.mainNav li.current a:before {
     background: #000000;
 }
 
-.bodyHeader .wrapper.fixed {
+.bodyHeader .wrapper.fixed, .bodyHeader_inner .wrapper {
     position: fixed;
     top: -100px;
     left: 0;
@@ -331,13 +333,14 @@ nav.mainNav li.current a:before {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
-.bodyHeader .wrapper.fixed h1.logo, .bodyHeader .wrapper.fixed strong.logo {
+.bodyHeader_inner .wrapper {top: 0;}
+.bodyHeader .wrapper.fixed h1.logo, .bodyHeader .wrapper.fixed strong.logo, .bodyHeader_inner .wrapper h1.logo, .bodyHeader_inner .wrapper strong.logo{
     float: left;
     margin: 0;
 }
-.bodyHeader .wrapper.fixed h1.logo a, .bodyHeader .wrapper.fixed strong.logo a {background-image: url(../images/logo-h.svg); width: 15rem; padding-top: 4.5rem;}
-.bodyHeader .wrapper.fixed nav.mainNav {float: right; position: absolute; right: 3.5rem; top: 50%; margin-top: -15px;}
-
+.bodyHeader .wrapper.fixed h1.logo a, .bodyHeader .wrapper.fixed strong.logo a, .bodyHeader_inner .wrapper h1.logo a, .bodyHeader_inner .wrapper strong.logo a {background-image: url(../images/logo-h.svg); width: 15rem; padding-top: 4.5rem;}
+.bodyHeader .wrapper.fixed nav.mainNav, .bodyHeader_inner .wrapper nav.mainNav {float: right; position: absolute; right: 3.5rem; top: 50%; margin-top: -15px;}
+.bodyHeader_inner .wrapper nav.mainNav { margin-top: -11px;}
 
 #navBtn {
   width: 24px;
