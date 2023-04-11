@@ -307,6 +307,7 @@ h1.logo {margin-bottom: 3rem;}
 h1.logo a, strong.logo a {display: block; text-indent: -9999rem; margin: 0 auto; width: 14rem;height: 0;padding-top: 9rem;background: url(../images/logo.svg) no-repeat center/contain;}
 nav.mainNav ul {position: relative; font-size: 0; text-align: center; display: flex; flex-wrap: nowrap; justify-content: center;}
 nav.mainNav li {padding: 0 1rem;}
+.wrapper.fixed nav.mainNav li:last-child {padding-right: 0;}
 nav.mainNav li a {color: #000; opacity: .3; font-size: 1.6rem; position: relative;}
 .bodyHeader_inner nav.mainNav li a {opacity: .6;}
 nav.mainNav li.current a, nav.mainNav li a:hover {opacity: 1;}

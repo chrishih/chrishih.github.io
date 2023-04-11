@@ -47,7 +47,7 @@
 @media screen and (max-width: 640px) {
     section.main {padding: 1rem; }
     .bodyHeader {}
-    .bodyHeader .wrapper.fixed h1.logo a, .bodyHeader .wrapper.fixed strong.logo a {background-image: url(../images/logo-icon.svg); width: 4.5rem; padding-top: 4.5rem;}
+    .bodyHeader .wrapper.fixed h1.logo a, .bodyHeader .wrapper.fixed strong.logo a, .bodyHeader_inner .wrapper h1.logo a {background-image: url(../images/logo-icon.svg); width: 4.5rem; padding-top: 4.5rem;}
 
     #pagetop p, #pagetop div {width: 40px; height: 40px;}
 
