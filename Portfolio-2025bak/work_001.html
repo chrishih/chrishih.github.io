@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Shih - Senior UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link href="work.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="scripts/loadComponents.js"></script>
+</head>
+
+<body class="bg-white text-gray-800">
+  <div id="pageLoader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Popup Container -->
+<div id="imagePopup" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+  <button id="closePopup" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+  <img id="popupImage" class="max-w-full max-h-full object-contain" alt="Popup Image">
+</div>
+
+  <!-- Header -->
+
+  <main class="portfolio-container">
+    <!-- <section class="hero-section">
+      <div class="container mx-auto px-10">
+        <header class="project-header">
+          
+            <div class="company-logos">
+                <img
+                    src="images/work_001/logo_udn.png"
+                    alt="Company Logo 1"
+                    class="logo-primary"
+                />
+                <img
+                    src="images/work_001/logo_udnvip.png"
+                    alt="Company Logo 2"
+                    class="logo-secondary"
+                />
+            </div>
+            <div class="project-intro">
+                <div class="intro-content">
+                    <h1 class="project-title">United News</h1>
+                    <p class="project-description">
+                        聯合報系的旗艦產品之一「udn News」在新聞媒體界中，保有新聞所言其實、公正客觀的本質
+                    </p>
+                </div>
+            </div>
+            
+          
+        </header>
+        <img
+            src="images/work_001/deco_device1.png"
+            alt="UDN News App Mockup"
+            class="app-mockup"
+        />
+        <aside class="designer-info">
+            <p class="project-category">App UI / UX Design</p>
+            <div class="designer-details">
+                <p class="designer-name">Chris Shih</p>
+                <div class="designer-avatar">
+                    <img
+                        src="https://api.builder.io/api/v1/image/assets/e4d0b5fa6f2547fa806de918cd143315/3edaf00588a096506705976c10f161a3cfd36f6a?placeholderIfAbsent=true"
+                        alt="Designer Avatar"
+                        class="avatar-image"
+                    />
+                </div>
+            </div>
+        </aside>
+        <div class="project-details">
+          <article class="detail-card">
+              <header class="card-header">
+                  <h3 class="card-title">Time</h3>
+              </header>
+              <p class="card-content">2021 2月 - 2021 7月</p>
+          </article>
+          <article class="detail-card">
+              <header class="card-header">
+                  <h3 class="card-title">My Role</h3>
+              </header>
+              <p class="card-content">UI Designer / UX Assistant</p>
+          </article>
+        </div>
+        
+      </div>
+    </section> -->
+    <!-- Tailwindcss hero-section -->
+    <section class="hero-section">
+      <div class="container mx-auto px-10">
+        <header class="project-header w-full sm:w-3/4 md:w-2/5">
+          
+            <div class="company-logos">
+                <img
+                    src="images/work_001/logo_udn.png"
+                    alt="Company Logo 1"
+                    class="logo-primary"
+                />
+                <img
+                    src="images/work_001/logo_udnvip.png"
+                    alt="Company Logo 2"
+                    class="logo-secondary"
+                />
+            </div>
+            <div class="project-intro">
+                <div class="intro-content">
+                    <h1 class="project-title">United News</h1>
+                    <p class="project-description text-lg">
+                        聯合報系的旗艦產品之一「udn News」在新聞媒體界中，保有新聞所言其實、公正客觀的本質
+                    </p>
+                </div>
+            </div>
+            
+          
+        </header>
+        <!-- <span class="graphicimg graphicimg_01"></span> -->
+        <img
+            src="images/work_001/deco_device1.png"
+            alt="UDN News App Mockup"
+            class="app-mockup"
+        />
+        <img
+            src="images/work_001/deco_device2.png"
+            alt="UDN News App Mockup"
+            class="app-mockup app-mockup2"
+        />
+        <aside class="designer-info">
+            <p class="project-category">App UI / UX Design</p>
+            <div class="designer-details">
+                <p class="designer-name">Chris Shih</p>
+                <div class="designer-avatar">
+                    <img
+                        src="https://api.builder.io/api/v1/image/assets/e4d0b5fa6f2547fa806de918cd143315/3edaf00588a096506705976c10f161a3cfd36f6a?placeholderIfAbsent=true"
+                        alt="Designer Avatar"
+                        class="avatar-image"
+                    />
+                </div>
+            </div>
+        </aside>
+        <div class="project-details">
+          <article class="detail-card">
+              <header class="card-header">
+                  <h3 class="card-title">Time</h3>
+              </header>
+              <p class="card-content">2021 2月 - 2021 7月</p>
+          </article>
+          <article class="detail-card">
+              <header class="card-header">
+                  <h3 class="card-title">My Role</h3>
+              </header>
+              <p class="card-content">UI Designer / UX Assistant</p>
+          </article>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="result-section section-dark py-40 -mt-16">
+      <div class="container mx-auto px-10">
+        <article class="section-content width-half">
+            <header class="section-header">
+                <h2>成果</h2>
+                <p class="description text-lg">
+                  經由深入的使用者研究與優化策略的落實，我們不僅提升了產品的留存率和轉化率，還大幅改善了跨平台（網頁版與 App 版）的體驗一致性。同時，設計規範的強化讓產品在視覺與操作上更具一致性，為使用者帶來了更流暢和協調的產品體驗。
+              </p>
+            </header>
+            
+        </article>
+        <img
+            src="images/work_001/deco_device2long.png"
+            alt="Project Results Visualization"
+            class="result-image"
+        />
+      </div>
+    </section>
+    <section class="problem-section py-20">
+      <div class="container mx-auto px-10">
+        <article class="section-content">
+          <header class="section-header width-half">
+              <h2>已知的問題</h2>
+              <p class="description text-lg">
+                探究現階段產品是否滿足既有使用者的使用需求前，先面對目前已知的問題。
+                瞭解目前產品所面臨的實際挑戰與問題。透過分析現有反饋與使用數據，我們建立一個清晰的問題輪廓，為後續的研究活動提供方向，確保我們的探索基於真實需求，並朝著改善使用者體驗的目標邁進。
+              </p>
+          </header>
+
+          <section class="py-16">
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  😥 留存率、轉化率降低
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_problem_01.png" alt="留存率、轉化率降低畫面" class="h-56 object-contain" />
+                </figure>
+                <p class="text-base leading-relaxed text-gray-700">
+                  觀察到產品的留存率與轉化率呈現下降趨勢，這可能反映出使用者在產品體驗中的某些環節遇到了瓶頸或需求未被滿足。接下來的研究將聚焦於找出影響留存與轉化的核心問題，深入了解使用者的痛點與需求，從而制定有效的優化策略，提升整體使用體驗。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  😥 跨平台介面不一致
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_problem_02.png" alt="使跨平台介面不一致畫面" class="h-56 object-contain" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  我們發現使用者在不同平台（網頁版與 App版）之間的介面存在不一致的情況，這可能導致使用者在切換平台時感到不便或困惑。接下來的研究將著重於分析各平台的使用流程與介面差異，找出影響一致性的關鍵問題，並提出改善建議。
+                </p>
+              </article>
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  😥 設計規範不嚴謹
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_problem_03.png" alt="設計規範不嚴謹畫面" class="h-56 object-contain" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  目前的設計規範存在不嚴謹的情況，這可能導致產品在視覺與操作體驗上的不一致，影響使用者的整體感受。接下來的工作將集中於梳理並強化設計規範，確保每個細節都符合統一的標準，為使用者提供一致的產品體驗。
+                </p>
+              </article>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <hr>
+    <!-- <div class="border-t border-gray-600 my-8"></div> -->
+
+    <section class="goal-section py-20">
+      <div class="container mx-auto px-10">
+        <article class="section-content">
+          <header class="section-header width-half">
+              <h2>目標</h2>
+          </header>
+
+          <section class="py-16">
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  🎯 洞察使用者行為：發掘深層需求與優化方向
+                </h3>
+                <p class="leading-relaxed text-gray-700">
+                  深入了解使用者在產品中的實際行為與需求，透過觀察他們在操作過程中的互動細節與反應，洞悉使用者的深層體驗。藉此，我們希望挖掘出影響使用者體驗的關鍵因素，並為後續設計優化提供具體的方向，讓產品更加貼近使用者的需求。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  🎯 強化設計規範：實現跨平台一致性與流暢體驗
+                </h3>
+                <p class="leading-relaxed text-gray-700">
+                  梳理並強化設計規範，確保視覺與互動風格的一致性，無論在任何平台上都能提供統一的產品體驗。透過建立明確的設計指導方針，我們希望解決跨平台體驗不一致的問題，讓使用者在不同裝置間切換時依然能享受到流暢而協調的產品體驗。
+                </p>
+              </article>
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  🎯 轉化策略探索：提升潛在使用者轉化率，激發產品吸引力
+                </h3>
+                <p class="leading-relaxed text-gray-700">
+                  探索並制定有效策略，將潛在使用者成功轉化為實際使用者。透過深入分析使用者的需求與行為，我們將思考如何優化產品體驗與推廣方式，降低轉化障礙，吸引更多潛在客群，提升使用者轉化率，讓產品價值更具吸引力。
+                </p>
+              </article>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section class="process-section py-20 bg-white">
+      <div class="container mx-auto px-10">
+        <article class="section-content">
+          <header class="section-header width-half">
+              <h2>過程</h2>
+              <p class="description text-lg">
+                以各戶為導向的流程
+              </p>
+          </header>
+
+          <section class="py-16 style-primary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">1</span>理解</h2>
+              <p class="mt-4 text-gray-600">了解使用者，了解服務數據回饋</p>
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">1-1</span>
+                  理解「需求」：聚焦在體驗優化
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_1-1.png" alt="理解「需求」畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  我們發現產品在廣告展示、導航設計、操作友善度與個性化功能等方面存在多項待改進之處。廣告的存在感過強，干擾了使用者的閱讀體驗；導航與選單設計不直觀，影響了使用者的操作流暢性；此外，個性化與閱讀體驗的功能不足，無法滿足使用者的需求。透過針對這些問題的優化，我們希望提升整體使用者體驗，讓產品更符合使用者的期望。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">1-2</span>
+                  理解「服務」：分析流量與數據觀察
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_1-2.png" alt="理解「服務」畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  我們發現產品在用戶增長和活躍度方面遇到瓶頸。排除行銷因素後，下載數無法突破，顯示自然增長面臨挑戰。同時，新下載、每月活躍用戶（MAU）和畫面瀏覽數（SV）呈下降趨勢，顯示使用者活躍度逐漸減弱。此外，Push 通知的點擊率偏低，未能有效帶動流量。這些發現突顯了產品在使用者吸引和參與度提升方面的改進空間。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="py-16 style-primary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">2</span>定義</h2>
+              <p class="mt-4 text-gray-600">根據上一步驟的研究結果，統整出幾個重點</p>
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">2-1</span>
+                  提升使用體驗的四大優化方向
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_2-1.png" alt="提升使用體驗的四大優化方向畫面" class="h-56 object-contain" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  <ol class="list-decimal pl-6 leading-relaxed space-y-4">
+                    <li>
+                      <p class="font-bold">廣告體驗優化：</p>
+                      <p>減少廣告干擾，提升其操作順暢性並降低存在感。</p>
+                    </li>
+                    <li>
+                      <p class="font-bold">導航與操作直覺性提升：</p>
+                      <p>優化切換頻道、選單位置和手勢操作，確保用戶能更直覺地進行內容瀏覽。</p>
+                    </li>
+                    <li>
+                      <p class="font-bold">強化個人化與自訂設置：</p>
+                      <p>增加個人化功能，並提升其可訪問性，讓使用者能輕鬆進行設定（文字大小）等偏好。</p>
+                    </li>
+                    <li>
+                      <p class="font-bold">引導與功能理解增強：</p>
+                      <p>針對「聽新聞」等功能提供更直覺的操作，使使用者在操作時不再疑惑。</p>
+                    </li>
+                  </ol>
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">2-2</span>
+                  用戶增長與留存策略
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_2-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-contain" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  <ol class="list-decimal pl-6 leading-relaxed font-medium space-y-4">
+                    <li>
+                      引導安裝與導流：
+                      <ol class="list-[lower-alpha] pl-6 font-normal mt-2 space-y-1">
+                        <li>透過更多的平台或管道進行行銷曝光。</li>
+                        <li>針對 Web 有強需求的「重度使用者」進行推廣。</li>
+                      </ol>
+                    </li>
+                    <li>
+                      擴大 App 用戶的黏著度及貢獻值：
+                      <ol class="list-[lower-alpha] pl-6 font-normal mt-2 space-y-1">
+                        <li>針對「淺層使用者」，進行一些特別的策略來提高流量或下載率。</li>
+                        <li>過多的推播會讓用戶感到煩躁，進而對整體推播通知失去興趣，甚至可能選擇關閉推播，降低用戶重新回訪的動機。</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="py-16 style-primary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">3</span>形成概念</h2>
+              <p class="mt-4 text-gray-600">縮小範圍並確定解決方案</p>
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-1</span>
+                  廣告體驗優化
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-1_1.png" alt="淡化內頁廣告呈現方式畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：淡化內頁廣告呈現方式</p>
+                      <p>移除 Underlay 滿版廣告，調整內頁廣告的外觀和位置與數量，讓廣告與新聞內容區分明顯，且不過於干擾閱讀流程。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-1_2.png" alt="首頁廣告標註畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：首頁廣告標註</p>
+                      <p>在首頁廣告上加上明確的標示，如「廣告」標籤，以減少誤解的可能性。或可加入背景色區隔、或是字體風格與其他新聞區隔，讓廣告不會干擾新聞的整體排版。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-1_3.png" alt="廣告操作引導畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 3：廣告操作引導</p>
+                      <p>增加使用者的廣告操作指引，比如移除或縮小按鈕，讓用戶感覺到自己能掌控廣告的呈現形式，不會感到干擾。</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-2</span>
+                  導航與操作直覺性提升
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-2_1.png" alt="頻道切換改進畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：頻道切換改進</p>
+                      <p>可以考慮將頻道切換改為清晰的文字標籤，或是提供一個「頻道」的下拉式選單，方便用戶找到不同新聞頻道。記住使用者上次停留的頻道，下次開啟時自動切換到該頻道。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-2_2.png" alt="新聞類別選單位置優化畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：新聞類別選單位置優化</p>
+                      <p>將新聞類別選單放在更容易找到的固定位置，以讓用戶快速理解這是可以點選的選單。使用更直觀的圖標或標籤來標示新聞頻道全覽。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-2_3.png" alt="手勢操作教學提示畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 3：手勢操作教學提示</p>
+                      <p>在使用者首次進入 App 時提供手勢操作的教學或簡易引導。加入圖示指引，或是短暫的提示，讓使用者更了解手勢操作。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-2_4.png" alt="統一開啟頁面的進場方式畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 4：統一開啟頁面的進場方式</p>
+                      <p>將非一般新聞類型的文章，用相同的轉場方式開啟</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-3</span>
+                  個人化與自訂設置增強
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-3_1.png" alt="增強個人化設置入口畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：增強個人化設置入口</p>
+                      <p>將個人化功能的入口設置在熟悉的位置（Drawer），並且用簡單的文字與設計來區隔設置的類別。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-3_2.png" alt="文字大小調整快畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：文字大小調整快捷鍵</p>
+                      <p>在內文頁面頂部或底部上加入文字大小調整按鈕，讓使用者可以一鍵調整文字大小，而不需要特別進入個人化功能進行設置，讓使用者輕鬆存取。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-3_3.png" alt="個性化推薦區域畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 3：個性化推薦區域</p>
+                      <p>根據用戶的偏好的關鍵字追蹤提供個性化內容。</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-4</span>
+                  功能理解與使用引導增強
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-4_1.png" alt="新功能、重點內容提示畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：新功能、重點內容提示</p>
+                      <p>當新功能或重點功能推出，提供暫時說明提示告知。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-4_2.png" alt="操作功能提示畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：操作功能提示</p>
+                      <p>當使用者打開較複雜功能時，可以彈出一個簡易的提示視窗，簡短說明如何操作。</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-5</span>
+                  引導安裝與導流
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-5_1.png" alt="理解「合作機會」畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：理解「合作機會」</p>
+                      <p>透過廣告與行銷活動，與雙 OS 平台尋求合作。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-5_2.png" alt="優化「跨平台體驗」畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：優化「跨平台體驗」</p>
+                      <p>針對 Web 有強需求的「重度使用者」，像是「會員」、「訂戶」等使用者，可在 web 登入後，介面上引導安裝 App，可提升使用服務的便利性，增加回訪率。</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-6</span>
+                  擴大 App 用戶的黏著度及貢獻值
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-6_1.png" alt="轉化「淺層使用者」畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 1：轉化「淺層使用者」</p>
+                      <p>經由搜尋、社群操作（ FB、Line、Google）導入 web 的淺層使用者，如能引導轉換成 App 用戶，則有機會藉由 App 使用者黏度較高的特性，提升其流量貢獻值。</p>
+                    </div>
+                  </article>
+                  <article class="rounded-lg">
+                    <figure class="mb-4">
+                      <img src="images/work_001/img_process_3-6_2.png" alt="精準「個性化推播」畫面" class="h-56" />
+                    </figure>
+                    <div class="leading-relaxed text-gray-700">
+                      <p class="font-bold">構思 2：精準「個性化推播」</p>
+                      <p>根據使用者的興趣進行個性化推播，確保使用者接收到的都是其關心的主題，避免不相關的通知讓使用者感到困擾。<br>利用後台數據蒐集興趣偏好、使用行為、歷史瀏覽內容、點擊行為、地理位置等數據。</p>
+                    </div>
+                  </article>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="py-16 style-primary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">4</span>使用者測試並最終確定</h2>
+              <p class="mt-4 text-gray-600">驗證我們可視化的所有想法，我們在內部進行了測試並展示原型供他們做出反饋。</p>
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">4-1</span>
+                  原型製作與測試計畫
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_4-1.png" alt="原型製作與測試計畫畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  建立初步的產品原型，並規劃測試方案，以驗證概念的可行性與使用性。我們根據設計概念建立互動模型，以確保測試過程能有效收集使用者的真實回饋，為後續改進提供具體依據。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">4-2</span>
+                  使用者測試
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_4-2.png" alt="使用者測試畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  邀請目標使用者參與實際的產品原型測試。透過觀察他們在真實情境中的操作行為，收集使用過程中的回饋和意見，進一步驗證設計概念的易用性與功能性。這些洞察將有助於我們了解產品在真實情境中的表現，並識別潛在的問題，以便進行後續的優化調整。
+                </p>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">4-3</span>
+                  討論並分析
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_process_4-3.png" alt="討論並分析畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  整理和檢視使用者測試中收集到的所有回饋，深入分析測試結果以發現關鍵問題點和使用趨勢。透過團隊成員之間的討論，我們從多角度評估使用者的需求與痛點，並找出最優先處理的改進項目。這一階段的目的在於為後續的設計優化提供具體的改進方向與行動計畫。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          
+          
+          
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="design-section py-20">
+      <div class="container mx-auto px-10">
+        <article class="section-content">
+          <header class="section-header width-half">
+              <h2>設計</h2>
+              <p class="description text-lg">
+                將需求轉化為可行的解決方案。在這個階段，我們將使用者的需求與產品的目標融合
+              </p>
+          </header>
+
+          <section class="py-16 style-secondary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">1</span>理解</h2>
+              <p class="mt-4 text-gray-600">廣告體驗優化</p>
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">1-1</span>
+                  淡化內頁廣告呈現
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_1-1.png" alt="淡化內頁廣告呈現畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  取消過於干擾閱讀的 underlay 固定廣告，並調整其他廣告的位置，讓廣告與新聞內容區分明顯，讓閱讀流程順暢。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">1-2</span>
+                  首頁廣告標註
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_1-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  在列表廣告上加上明確的“廣告”標籤標示，並讓文字風格做小部分區隔，以減少誤解的可能性。另調整廣告尺寸，增加新聞露出範圍。
+                </p>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">1-3</span>
+                  廣告操作引導
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_1-3.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  置底廣告增加移除按鈕，讓用戶感覺到自己能掌控廣告的呈現形式。
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="py-16 style-secondary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">2</span>導航與操作直覺性提升</h2>
+              <!-- <p class="mt-4 text-gray-600">根據上一步驟的研究結果，統整出幾個重點</p> -->
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">2-1</span>
+                  頻道切換改進
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_2-1.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  將兩大頻道切換移到第一層，並改為較清晰、更直覺的文字標籤。記住使用者上次停留的頻道，下次開啟時自動切換到該頻道。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">2-2</span>
+                  新聞類別選單位置優化
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_2-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  將新聞類別選單放在更容易找到的頂部導航欄，來讓用戶快速理解這是可以點選的選單。使用更直觀的圖標或標籤來標示新聞頻道全覽，而不是現有版的點選 Logo icon。
+                </p>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">2-3</span>
+                  手勢操作教學提示
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_2-3.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  在使用者首次進入 App 內頁時提供手勢操作的教學或簡易引導，左右滑動切換新聞、返回的手勢教學。
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="py-16 style-secondary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">3</span>個人化與自訂設置增強</h2>
+              <!-- <p class="mt-4 text-gray-600">個人化與自訂設置增強</p> -->
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-1</span>
+                  增強個人化設置入口
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_3-1.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  將個人化功能的入口設置在熟悉的位置（Drawer內），未來規劃功能如果有新功能，加上 badge 提醒。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-2</span>
+                  文字大小調整快捷鍵
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_3-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  在內文頁面頂部加入文字大小調整按鈕，讓使用者可以在內頁直接調整文字大小，而不需要特別進入個人化功能進行設置。
+                </p>
+              </article>
+
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">3-3</span>
+                  個性化推薦區域
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_3-3.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  規劃「追蹤新聞關鍵字」功能，根據用戶的偏好的關鍵字追蹤提供個性化內容。
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="py-16 style-secondary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">4</span>功能理解與使用引導增強</h2>
+              <!-- <p class="mt-4 text-gray-600">個人化與自訂設置增強</p> -->
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">4-1</span>
+                  新功能、重點內容提示
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_4-1.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  當新功能推出時，跳出提示告知。另外利用 IAM 推薦特定內容吸引使用者，以提升內容的曝光率與點擊率。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">4-2</span>
+                  操作功能提示
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_4-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  當使用者打開報紙功能時，彈出一個簡易的提示教學，簡短說明如何操作。
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="py-16 style-secondary">
+            <header class="mb-8">
+              <h2 class="flex items-center gap-3 text-2xl font-bold text-gray-900"><span class="section-number">5</span>引導安裝與導流、擴大 App 用戶的黏著度及貢獻值</h2>
+              <!-- <p class="mt-4 text-gray-600">個人化與自訂設置增強</p> -->
+            </header>
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">5-1</span>
+                  引導核心用戶轉向 App
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_5-1.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  為了強化核心用戶的體驗，我們在 Web 平台的上方設置了一個引導 Banner，邀請使用者下載 App 平台。透過此方法，我們期望能讓使用者體驗到 App 的完整功能與服務，進而提升使用黏著度與互動深度。此設計旨在提高核心用戶的留存率，並打造更一致且流暢的跨平台使用體驗。
+                </p>
+              </article>
+          
+              <article class="rounded-lg">
+                <h3 class="text-xl font-bold mb-4">
+                  <span class="mr-2 subsection-number">5-2</span>
+                  根據偏好與行為精準推薦
+                </h3>
+                <figure class="mb-4">
+                  <img src="images/work_001/img_design_5-2.png" alt="用戶增長與留存策略畫面" class="h-56 object-cover" />
+                </figure>
+                <p class="leading-relaxed text-gray-700">
+                  設計個性化新聞體驗的解決方案。透過讓使用者自訂新聞類別偏好，並根據使用者的興趣或行為進行分群，我們可以提供更貼合個人需求的新聞推播，增加用戶的參與度與滿意度。此項設計希望可以讓每位使用者都能快速接觸到符合其興趣的內容，強化了產品的吸引力與黏著度。
+                </p>
+              </article>
+
+            </div>
+          </section>
+          
+          
+          
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="result-section section-dark py-40">
+      <div class="container mx-auto px-10 flex flex-row-reverse">
+        <article class="section-content width-half">
+            <header class="section-header">
+                <h2 class="mb-6">成果與反思</h2>
+                <div class="description text-lg font-normal">
+                  <p>
+                    經由深入的使用者研究與優化策略的落實，我們不僅提升了產品的留存率和轉化率，還大幅改善了跨平台（網頁版與 App 版）的體驗一致性。同時，設計規範的強化讓產品在視覺與操作上更具一致性，為使用者帶來了更流暢和協調的產品體驗。 App 版）的體驗一致性。同時，設計規範的強化讓產品在視覺與操作上更具一致性，為使用者帶來了更流暢和協調的產品體驗。
+                  </p>
+                  <p>
+                    這次參與產品的優化設計，讓我再次確認 UX 設計的核心在於精準理解並滿足使用者的真實需求。過去我專注於功能和美觀的平衡，這次活動中從使用者數據出發，讓我更加清楚在設計中要如何解決「潛在使用者的轉化」和「現有使用者的黏著度」。另外，跨平台一致性的維護，以及設計規範的強化，讓我深刻認識到一個產品的成功，不只是單一平台的完美體驗，而是全方位的協調一致。
+                  </p>
+                </div>
+            </header>
+            
+        </article>
+      </div>
+    </section>
+    
+</main>
+  
+
+  <!-- Footer -->
+
+  <!-- Back to Top Button -->
+
+  <script src="scripts/tailwindConfig.js"></script>
+  <script src="scripts/imagePopup.js"></script>
+
+</body>
+
+</html>
