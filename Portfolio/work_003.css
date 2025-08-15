@@ -1,0 +1,90 @@
+/* CSS Custom Properties */
+@import url(work.css);
+:root {
+  --Main_BG: #ffffff;
+  --Primary: #1D92C6;
+  --Primary_container: #E9EEF2;
+  --Description_grey: #919198;
+  --Grey_1: #303132;
+  --Grey_1_darkbg: #fff;
+  --Gray-3: #8b8f94;
+  --Gray-1: #303132;
+  --Error: #EE2A2E;
+  --Secondary: #5E8095;
+  --Border_light: #e7e7ef;
+}
+
+.hero-section {
+  background-image: url('images/work_002/hero_section_bg-work_002.png');
+  background-size: cover;
+  background-position: center;
+}
+.hero-section::before {display: none;}
+@media (max-width: 552px) {
+  .hero-section {
+    background-position: 30% 0%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .hero-section::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 0;
+    padding-top: 240%;
+    background-image: url('images/work_002/deco_herosection_mobile.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  } 
+}
+
+.app-mockup {
+  width: 36rem;
+  top: 4rem;
+  margin-left: 46rem;
+}
+
+.grid figure {
+  background: var(--Primary_container);
+}
+
+.company-logos img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 130px;
+  fill: var(--Primary);
+  filter: drop-shadow(0px 7.111px 5.689px rgba(29, 146, 198, 0.02))
+         drop-shadow(0px 17.088px 13.671px rgba(29, 146, 198, 0.03))
+         drop-shadow(0px 32.176px 25.74px rgba(29, 146, 198, 0.04))
+         drop-shadow(0px 57.396px 45.917px rgba(29, 146, 198, 0.04))
+         drop-shadow(0px 107.352px 85.882px rgba(29, 146, 198, 0.05))
+         drop-shadow(0px 256.962px 205.569px rgba(203, 37, 41, 0.07));
+  flex-shrink: 0;
+}
+
+.deco_img {
+  position: relative;
+}
+.result-image {
+  aspect-ratio: 0.47;
+  object-fit: cover;
+  object-position: top;
+  width: 28rem;
+  height: 30rem;
+  left: 0;
+  transform: none;
+  bottom: 0px;
+  margin-left: 0;
+}
+.result-image2 {
+  bottom: -15rem;
+  left: 15rem;
+  height: 50rem;
+}
