@@ -15,7 +15,7 @@
 }
 
 .hero-section {
-  background-image: url('images/work_002/hero_section_bg-work_002.png');
+  background-image: url('images/app_002/hero_section_bg.png');
   background-size: cover;
   background-position: center;
 }
@@ -37,7 +37,7 @@
     width: 140%;
     height: 0;
     padding-top: 240%;
-    background-image: url('images/work_002/deco_herosection_mobile.png');
+    background-image: url('images/app_002/deco_herosection_mobile.png');
     background-size: cover;
     background-position: center;
     z-index: 2;

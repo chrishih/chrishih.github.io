@@ -144,7 +144,7 @@
 }
 
 .project-title {
-  color: rgba(48, 49, 50, 1);
+  /* color: rgba(48, 49, 50, 1); */
   letter-spacing: 0.5px;
   font: 700 71px/1 'SF Pro Display', -apple-system, Roboto, Helvetica, sans-serif;
 }
@@ -156,7 +156,7 @@
 }
 
 .project-description {
-  color: var(--Description_grey);
+  /* color: var(--Description_grey); */
   font-feature-settings: "liga" off, "clig" off;
   margin-top: 38px;
   /* font: 500 18px/36px 'Noto Sans TC', -apple-system, Roboto, Helvetica, sans-serif; */
