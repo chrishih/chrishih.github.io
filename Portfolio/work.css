@@ -542,3 +542,17 @@ figure img {
 .metric-label {
   color: #667788;
 }
+
+/* ...返回按鈕... */
+#backToWorkBtn {
+  /* 初始隱藏與左移 */
+  opacity: 0;
+  transform: translateX(-40px);
+  pointer-events: none;
+}
+#backToWorkBtn.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+/* ...返回按鈕... */
