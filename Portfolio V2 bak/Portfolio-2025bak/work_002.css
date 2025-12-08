@@ -1,0 +1,17 @@
+/* CSS Custom Properties */
+@import url(work.css);
+:root {
+  --Main_BG: #F7F7FC;
+  --Primary: #cb2529;
+  --Primary_soft: #d33c40;
+  --Primary_container: #FFE3E4;
+  --Description_grey: #919198;
+  --Grey_1: #303132;
+  --Grey_1_darkbg: #fff;
+  --Gray-3: #8b8f94;
+  --Gray-1: #303132;
+  --Error: #EE2A2E;
+  --Secondary: #558BFF;
+  --Secondary_container: #D6E3FF;
+  --Border_light: #DCDCE9;
+}
