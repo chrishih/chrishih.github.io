@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Test</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #f0f0f0;
+            cursor: none;
+            /* Hide default cursor */
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ff0000;
+            /* Red for visibility */
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease, transform 0.2s ease;
+            mix-blend-mode: normal;
+            /* Normal for visibility test */
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ff0000;
+            /* Red for visibility */
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 99998;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
+            mix-blend-mode: normal;
+            /* Normal for visibility test */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cursor Test Page</h1>
+    <p>Move your mouse around. You should see a red dot and circle.</p>
+    <button style="padding: 10px 20px; font-size: 16px; margin-top: 50px;">Hover Me</button>
+
+    <script>
+        // Custom Cursor Effect
+        (function () {
+            console.log('Test script running');
+
+            // Create cursor elements
+            const cursorDot = document.createElement('div');
+            cursorDot.className = 'cursor-dot';
+            cursorDot.style.opacity = '1';
+            document.body.appendChild(cursorDot);
+
+            const cursorOutline = document.createElement('div');
+            cursorOutline.className = 'cursor-outline';
+            cursorOutline.style.opacity = '1';
+            document.body.appendChild(cursorOutline);
+
+            // Track mouse position
+            let mouseX = window.innerWidth / 2; // Start center
+            let mouseY = window.innerHeight / 2;
+            let outlineX = mouseX;
+            let outlineY = mouseY;
+
+            // Initial position
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+            cursorOutline.style.left = outlineX + 'px';
+            cursorOutline.style.top = outlineY + 'px';
+
+            // Update mouse position
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+
+                // Update dot position immediately
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            });
+
+            // Animate outline with smooth following effect
+            function animateOutline() {
+                // Smooth following with easing
+                outlineX += (mouseX - outlineX) * 0.15;
+                outlineY += (mouseY - outlineY) * 0.15;
+
+                cursorOutline.style.left = outlineX + 'px';
+                cursorOutline.style.top = outlineY + 'px';
+
+                requestAnimationFrame(animateOutline);
+            }
+            animateOutline();
+
+            // Add hover effects
+            const interactiveElements = document.querySelectorAll('button');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    cursorOutline.style.width = '60px';
+                    cursorOutline.style.height = '60px';
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.width = '40px';
+                    cursorOutline.style.height = '40px';
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
