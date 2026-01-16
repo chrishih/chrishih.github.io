@@ -1,11 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const isWorks = window.location.pathname.includes('/works/');
+  const basePath = isWorks ? '../' : '';
+
   // 動態載入 Header
-  fetch('components/header.html')
+  fetch(basePath + 'components/header.html')
     .then(response => {
       if (!response.ok) throw new Error(`Failed to fetch header: ${response.status}`);
       return response.text();
     })
     .then(data => {
+      if (isWorks) {
+        data = data.replace(/href="(?!http|#|mailto:)(\w)/g, 'href="../$1');
+        data = data.replace(/src="(?!http)(\w)/g, 'src="../$1');
+      }
       document.body.insertAdjacentHTML('afterbegin', data);
 
       // 高亮當前頁面的 nav-link
@@ -14,10 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === 'work.html' && (currentPath.startsWith('work_') || currentPath === 'work.html')) {
+        const targetPage = href ? href.split('/').pop() : '';
+        if (targetPage === 'work.html' && (currentPath.startsWith('work_') || currentPath === 'work.html')) {
           // 如果檔案名稱以 "work_" 開頭或是 "work.html"，將 Work 設置為 active
           link.classList.add('active');
-        } else if (href === currentPath) {
+        } else if (targetPage === currentPath) {
           // 如果是其他頁面，根據 href 匹配
           link.classList.add('active');
         }
@@ -82,15 +90,19 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(err => console.error(err));
 
-    
+
 
   // 動態載入 Footer
-  fetch('components/footer.html')
+  fetch(basePath + 'components/footer.html')
     .then(response => {
       if (!response.ok) throw new Error(`Failed to fetch footer: ${response.status}`);
       return response.text();
     })
     .then(data => {
+      if (isWorks) {
+        data = data.replace(/href="(?!http|#|mailto:)(\w)/g, 'href="../$1');
+        data = data.replace(/src="(?!http)(\w)/g, 'src="../$1');
+      }
       document.body.insertAdjacentHTML('beforeend', data);
     })
     .catch(err => console.error(err));
@@ -100,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // 動態載入 Back-to-Top Button
-  fetch('components/backToTop.html')
+  fetch(basePath + 'components/backToTop.html')
     .then(response => {
       if (!response.ok) throw new Error(`Failed to fetch back-to-top button: ${response.status}`);
       return response.text();

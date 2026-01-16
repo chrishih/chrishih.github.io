@@ -1,0 +1,27 @@
+<header class="fixed w-full bg-white/95 backdrop-blur-sm z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="text-2xl font-medium tracking-tight text-primary">CS<span
+        class="animate-blink">_</span></a>
+    <nav class="hidden md:flex items-center space-x-8 ml-auto"> <!-- 加入 ml-auto 將 <nav> 靠齊右側 -->
+      <a href="index.html" class="nav-link text-gray-700 hover:text-primary hover-underline">Home</a>
+      <a href="work.html" class="nav-link text-gray-700 hover:text-primary hover-underline">Work</a>
+      <a href="about.html" class="nav-link text-gray-700 hover:text-primary hover-underline">About</a>
+    </nav>
+    <!-- 暫時隱藏 Theme Toggle -->
+    <!-- <button id="themeToggle" class="w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition-colors">
+      <i class="ri-sun-line ri-lg"></i>
+    </button> -->
+    <button class="md:hidden w-10 h-10 flex items-center justify-center text-primary" id="mobileMenuButton">
+      <i class="ri-menu-line ri-lg"></i>
+    </button>
+  </div>
+  <div class="md:hidden hidden bg-white w-full absolute top-full left-0 border-b border-gray-100" id="mobileMenu">
+    <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+      <a href="index.html" class="nav-link text-gray-700 hover:text-primary py-2 transition-colors">Home</a>
+      <a href="work.html" class="nav-link text-gray-700 hover:text-primary py-2 transition-colors">Work</a>
+      <a href="about.html" class="nav-link text-gray-700 hover:text-primary py-2 transition-colors">About</a>
+    </div>
+  </div>
+</header>
+
+<script src="../scripts/header.js"></script>

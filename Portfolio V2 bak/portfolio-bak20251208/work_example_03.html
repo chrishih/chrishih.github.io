@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Example 03 - Minimal List | Chris Shih</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="scripts/loadComponents.js"></script>
+    <style>
+        /* Minimal List Layout Styles */
+        .list-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            position: relative;
+        }
+
+        .list-item.hidden {
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .list-item:hover {
+            background: #fafafa;
+        }
+
+        @media (max-width: 768px) {
+            .list-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 0;
+            }
+        }
+
+        .list-number {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #9ca3af;
+            min-width: 60px;
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        .list-thumbnail {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .list-thumbnail {
+                width: 100%;
+                height: 200px;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .list-item:hover .list-thumbnail {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .list-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .list-content {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+        }
+
+        .list-info {
+            flex: 1;
+        }
+
+        .list-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .list-item:hover .list-title {
+            color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .list-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        .list-tags {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .list-tag {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .list-tag::after {
+            content: '•';
+            margin-left: 0.75rem;
+            color: #d1d5db;
+        }
+
+        .list-tag:last-child::after {
+            content: '';
+            margin: 0;
+        }
+
+        .list-description {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .list-arrow {
+            font-size: 1.5rem;
+            color: #d1d5db;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .list-item:hover .list-arrow {
+            transform: translateX(8px);
+            color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .list-arrow {
+                align-self: flex-end;
+            }
+        }
+
+        /* Preview Image on Hover */
+        .list-preview {
+            position: fixed;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+
+        @media (max-width: 1024px) {
+            .list-preview {
+                display: none;
+            }
+        }
+
+        .list-preview.active {
+            opacity: 1;
+        }
+
+        .list-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <div id="pageLoader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+
+    <div class="pb-8 pt-32 md:pb-20 container mx-auto px-6">
+        <div>
+            <h2 class="text-4xl md:text-6xl font-semibold mb-4">Featured Work</h2>
+            <p class="text-gray-600 max-w-2xl mb-2">
+                Minimal List Layout - Clean, typography-focused list with hover preview functionality.
+            </p>
+            <a href="work.html" class="text-sm text-gray-500 hover:text-gray-800 hover-underline">← Back to original
+                layout</a>
+        </div>
+    </div>
+
+    <!-- Filters Section -->
+    <section class="py-4 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex mb-8 space-x-4">
+                <button class="filter-btn active px-6 py-2 font-medium transition-colors" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn px-6 py-2 font-medium transition-colors" data-filter="app">
+                    App
+                </button>
+                <button class="filter-btn px-6 py-2 font-medium transition-colors" data-filter="web">
+                    Web
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- List Layout -->
+    <section class="py-16 bg-white">
+        <div class="list-container px-6">
+            <!-- Project 1 -->
+            <a href="app_001.html" class="list-item work-card" data-category="app"
+                data-preview="images/app_001/thumb.png">
+                <span class="list-number">01</span>
+                <img src="images/app_001/thumb.png" alt="United News" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">App</span>
+                        </div>
+                        <h3 class="list-title">United News</h3>
+                        <p class="list-description">不僅提升了產品的留存率和轉化率，還大幅改善了跨平台的體驗一致性。</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="app_002.html" class="list-item work-card" data-category="app"
+                data-preview="images/app_002/thumb.png">
+                <span class="list-number">02</span>
+                <img src="images/app_002/thumb.png" alt="Jin FM" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">App</span>
+                        </div>
+                        <h3 class="list-title">Jin FM</h3>
+                        <p class="list-description">經過產品迭代，產品逐年成長，營收成長了 80% 以上。</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="app_003.html" class="list-item work-card" data-category="app"
+                data-preview="images/app_003/thumb.png">
+                <span class="list-number">03</span>
+                <img src="images/app_003/thumb.png" alt="Clock-in App" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UX</span>
+                            <span class="list-tag">App</span>
+                        </div>
+                        <h3 class="list-title">Clock-in App</h3>
+                        <p class="list-description">每天的使用人數從 33% 達到了 82%。</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 4 -->
+            <a href="#" class="list-item work-card" data-category="app" data-preview="images/app_004/thumb.png">
+                <span class="list-number">04</span>
+                <img src="images/app_004/thumb.png" alt="理財吧" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">App</span>
+                        </div>
+                        <h3 class="list-title">理財吧</h3>
+                        <p class="list-description">Project management tool enhancing team collaboration.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 5 -->
+            <a href="#" class="list-item work-card" data-category="app" data-preview="images/app_005/thumb.png">
+                <span class="list-number">05</span>
+                <img src="images/app_005/thumb.png" alt="讀書吧" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">App</span>
+                        </div>
+                        <h3 class="list-title">讀書吧</h3>
+                        <p class="list-description">Travel planning platform with personalized recommendations.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 6 -->
+            <a href="#" class="list-item work-card" data-category="web" data-preview="images/web_001/thumb.png">
+                <span class="list-number">06</span>
+                <img src="images/web_001/thumb.png" alt="故宮 - 典藏精選" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">Web</span>
+                        </div>
+                        <h3 class="list-title">故宮 - 典藏精選</h3>
+                        <p class="list-description">Fitness tracking app with personalized workout plans.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 7 -->
+            <a href="#" class="list-item work-card" data-category="web" data-preview="images/web_002/thumb.png">
+                <span class="list-number">07</span>
+                <img src="images/web_002/thumb.png" alt="西拉雅國家風景區官網" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI / UX</span>
+                            <span class="list-tag">Web</span>
+                        </div>
+                        <h3 class="list-title">西拉雅國家風景區官網</h3>
+                        <p class="list-description">Learning management system enhancing student engagement.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 8 -->
+            <a href="#" class="list-item work-card" data-category="web" data-preview="images/web_003/thumb.png">
+                <span class="list-number">08</span>
+                <img src="images/web_003/thumb.png" alt="i購西拉雅" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI</span>
+                            <span class="list-tag">Web</span>
+                        </div>
+                        <h3 class="list-title">i購西拉雅</h3>
+                        <p class="list-description">Connected home management system with intuitive control.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 9 -->
+            <a href="#" class="list-item work-card" data-category="web" data-preview="images/web_004/thumb.png">
+                <span class="list-number">09</span>
+                <img src="images/web_004/thumb.png" alt="故宮主網越印泰語版" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI</span>
+                            <span class="list-tag">Web</span>
+                        </div>
+                        <h3 class="list-title">故宮主網越印泰語版</h3>
+                        <p class="list-description">Music streaming platform with personalized discovery.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Project 10 -->
+            <a href="#" class="list-item work-card" data-category="web" data-preview="images/web_005/thumb.png">
+                <span class="list-number">10</span>
+                <img src="images/web_005/thumb.png" alt="故宮活動網" class="list-thumbnail">
+                <div class="list-content">
+                    <div class="list-info">
+                        <div class="list-tags">
+                            <span class="list-tag">UI</span>
+                            <span class="list-tag">Web</span>
+                        </div>
+                        <h3 class="list-title">故宮活動網</h3>
+                        <p class="list-description">Music streaming platform with social sharing features.</p>
+                    </div>
+                    <i class="ri-arrow-right-line list-arrow"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Preview Image Container -->
+    <div class="list-preview" id="listPreview">
+        <img src="" alt="Preview">
+    </div>
+
+    <!-- Footer -->
+
+    <script src="scripts/smoothScroll.js"></script>
+    <script src="scripts/workFilters.js"></script>
+    <script src="scripts/tailwindConfig.js"></script>
+    <script src="scripts/customCursor.js"></script>
+    <script>
+        // Preview image on hover (desktop only)
+        const listItems = document.querySelectorAll('.list-item');
+        const preview = document.getElementById('listPreview');
+        const previewImg = preview.querySelector('img');
+
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                const previewSrc = this.getAttribute('data-preview');
+                if (previewSrc && window.innerWidth > 1024) {
+                    previewImg.src = previewSrc;
+                    preview.classList.add('active');
+                }
+            });
+
+            item.addEventListener('mouseleave', function () {
+                preview.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Shih - Senior UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="scripts/loadComponents.js"></script>
+
+</head>
+
+<body class="bg-white text-gray-800">
+  <div id="pageLoader">
+    <div class="spinner"></div>
+  </div>
+  <!-- Header -->
+
+  <div class="pb-8 pt-32 md:pb-20 container mx-auto px-6">
+    <div>
+      <h2 class="text-4xl md:text-6xl font-semibold mb-4">Featured Work</h2>
+      <p class="text-gray-600 max-w-2xl">
+        A collection of my most impactful projects across various industries and platforms.
+      </p>
+    </div>
+  </div>
+  <!-- Featured Work Grid -->
+  <section id="work" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="flex mb-8 space-x-4">
+        <button class="filter-btn active px-6 py-2 font-medium transition-colors" data-filter="all">
+          All
+        </button>
+        <button class="filter-btn px-6 py-2 font-medium transition-colors" data-filter="app">
+          App
+        </button>
+        <button class="filter-btn px-6 py-2 font-medium transition-colors" data-filter="web">
+          Web
+        </button>
+      </div>
+
+      <!-- Hero Cards Grid -->
+      <div class="hero-cards-grid">
+        <!-- Project 1 - Featured -->
+        <a href="app_001.html" class="hero-card featured work-card" data-category="app">
+          <img src="images/app_001/thumb.png" alt="United News" class="hero-card-image">
+          <div class="hero-card-number">01</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">App</span>
+            </div>
+            <h3 class="hero-card-title">United News</h3>
+            <p class="hero-card-description">不僅提升了產品的留存率和轉化率，還大幅改善了跨平台的體驗一致性。同時，設計規範的強化讓產品在視覺與操作上更具一致性。</p>
+            <span class="hero-card-cta">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="app_002.html" class="hero-card work-card" data-category="app">
+          <img src="images/app_002/thumb.png" alt="Jin FM" class="hero-card-image">
+          <div class="hero-card-number">02</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">App</span>
+            </div>
+            <h3 class="hero-card-title">Jin FM</h3>
+            <p class="hero-card-description">經過產品迭代，產品逐年成長，與前兩年成果做比較，營收成長了 80% 以上。</p>
+            <span class="hero-card-cta">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="app_003.html" class="hero-card work-card" data-category="app">
+          <img src="images/app_003/thumb.png" alt="Clock-in App" class="hero-card-image">
+          <div class="hero-card-number">03</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UX</span>
+              <span class="hero-card-tag">App</span>
+            </div>
+            <h3 class="hero-card-title">Clock-in App</h3>
+            <p class="hero-card-description">在設計活動過後，經過產品系統面的迭代與優化，每天的使用人數從 33% 達到了 82%。</p>
+            <span class="hero-card-cta">View Case Study <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
+
+        <!-- Project 4 - Featured -->
+        <a href="javascript:void(0)" class="hero-card featured work-card coming-soon" data-category="app">
+          <img src="images/app_004/thumb.png" alt="理財吧" class="hero-card-image">
+          <div class="hero-card-number">04</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">App</span>
+            </div>
+            <h3 class="hero-card-title">理財吧</h3>
+            <p class="hero-card-description">協助用戶輕鬆管理個人財務，提供直觀的收支追蹤與資產分析功能。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="javascript:void(0)" class="hero-card work-card coming-soon" data-category="app">
+          <img src="images/app_005/thumb.png" alt="讀書吧" class="hero-card-image">
+          <div class="hero-card-number">05</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">App</span>
+            </div>
+            <h3 class="hero-card-title">讀書吧</h3>
+            <p class="hero-card-description">打造專屬的閱讀社群，提供電子書閱讀、書評分享與個人化推薦。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="javascript:void(0)" class="hero-card work-card coming-soon" data-category="web">
+          <img src="images/web_001/thumb.png" alt="故宮 - 典藏精選" class="hero-card-image">
+          <div class="hero-card-number">06</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">Web</span>
+            </div>
+            <h3 class="hero-card-title">故宮 - 典藏精選</h3>
+            <p class="hero-card-description">數位化呈現故宮珍貴文物，讓使用者能線上瀏覽精選典藏與詳細解說。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 7 - Featured -->
+        <a href="javascript:void(0)" class="hero-card featured work-card coming-soon" data-category="web">
+          <img src="images/web_002/thumb.png" alt="西拉雅國家風景區官網" class="hero-card-image">
+          <div class="hero-card-number">07</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI / UX</span>
+              <span class="hero-card-tag">Web</span>
+            </div>
+            <h3 class="hero-card-title">西拉雅國家風景區官網</h3>
+            <p class="hero-card-description">整合風景區旅遊資訊，提供遊客便捷的景點查詢、交通指引與行程規劃。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 8 -->
+        <a href="javascript:void(0)" class="hero-card work-card coming-soon" data-category="web">
+          <img src="images/web_003/thumb.png" alt="i購西拉雅" class="hero-card-image">
+          <div class="hero-card-number">08</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI</span>
+              <span class="hero-card-tag">Web</span>
+            </div>
+            <h3 class="hero-card-title">i購西拉雅</h3>
+            <p class="hero-card-description">推廣在地特色商品，建立便捷的線上購物平台，連結在地商家與消費者。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 9 -->
+        <a href="javascript:void(0)" class="hero-card work-card coming-soon" data-category="web">
+          <img src="images/web_004/thumb.png" alt="故宮主網越印泰語版" class="hero-card-image">
+          <div class="hero-card-number">09</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI</span>
+              <span class="hero-card-tag">Web</span>
+            </div>
+            <h3 class="hero-card-title">故宮主網越印泰語版</h3>
+            <p class="hero-card-description">優化多語系使用者體驗，為東南亞語系訪客提供友善且無障礙的故宮資訊服務。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+
+        <!-- Project 10 -->
+        <a href="javascript:void(0)" class="hero-card work-card coming-soon" data-category="web">
+          <img src="images/web_005/thumb.png" alt="故宮活動網" class="hero-card-image">
+          <div class="hero-card-number">10</div>
+          <div class="hero-card-overlay">
+            <div class="hero-card-tags">
+              <span class="hero-card-tag">UI</span>
+              <span class="hero-card-tag">Web</span>
+            </div>
+            <h3 class="hero-card-title">故宮活動網</h3>
+            <p class="hero-card-description">整合故宮各類展覽與活動資訊，提供即時的活動查詢與線上報名服務。</p>
+            <span class="hero-card-cta">Coming Soon</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <!-- Back to Top Button -->
+
+  <script src="scripts/smoothScroll.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const workCards = document.querySelectorAll('.work-card');
+      let workGrid = document.querySelector('.grid');
+
+      // If .grid is not found, try to find the parent of the first work card
+      if (!workGrid && workCards.length > 0) {
+        workGrid = workCards[0].parentElement;
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const filter = this.getAttribute('data-filter');
+
+          // 更新按鈕樣式
+          filterButtons.forEach(btn => btn.classList.remove('active')); // 移除其他按鈕的 active 樣式
+          this.classList.add('active'); // 為當前按鈕添加 active 樣式
+
+          // 隱藏 grid section
+          if (workGrid) {
+            workGrid.style.opacity = '0';
+            workGrid.style.transition = 'opacity 0.5s ease';
+
+            setTimeout(() => {
+              // 篩選作品
+              workCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                  card.classList.remove('hidden'); // 顯示作品
+                } else {
+                  card.classList.add('hidden'); // 隱藏作品
+                }
+              });
+
+              // 顯示 grid section
+              workGrid.style.opacity = '1';
+            }, 500); // 等待淡出完成後重新排列
+          } else {
+            // Fallback: just filter without animation
+            workCards.forEach(card => {
+              if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                card.classList.remove('hidden'); // 顯示作品
+              } else {
+                card.classList.add('hidden'); // 隱藏作品
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+  <script src="scripts/tailwindConfig.js"></script>
+
+  <script>
+    // Custom Cursor Effect
+    (function () {
+      'use strict';
+
+      // Wait for DOM to be ready
+      function initCursor() {
+        try {
+          console.log('Initializing custom cursor (Inline)...');
+
+          // Create cursor elements
+          const cursorDot = document.createElement('div');
+          cursorDot.className = 'cursor-dot';
+          cursorDot.style.opacity = '1'; // Set initial opacity to 1
+          document.body.appendChild(cursorDot);
+
+          const cursorOutline = document.createElement('div');
+          cursorOutline.className = 'cursor-outline';
+          cursorOutline.style.opacity = '1'; // Set initial opacity to 1
+          document.body.appendChild(cursorOutline);
+
+          console.log('Cursor elements created');
+
+          // Track mouse position
+          let mouseX = 0;
+          let mouseY = 0;
+          let outlineX = 0;
+          let outlineY = 0;
+
+          // Update mouse position
+          document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            // Update dot position immediately
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+
+            // Ensure cursor is visible when moving
+            cursorDot.style.opacity = '1';
+            cursorOutline.style.opacity = '1';
+          });
+
+          // Animate outline with smooth following effect
+          function animateOutline() {
+            // Smooth following with easing
+            outlineX += (mouseX - outlineX) * 0.15;
+            outlineY += (mouseY - outlineY) * 0.15;
+
+            cursorOutline.style.left = outlineX + 'px';
+            cursorOutline.style.top = outlineY + 'px';
+
+            requestAnimationFrame(animateOutline);
+          }
+          animateOutline();
+
+          // Add hover effects for interactive elements
+          function addHoverEffects() {
+            const interactiveElements = document.querySelectorAll('a, button, .filter-btn, input, textarea');
+
+            interactiveElements.forEach(el => {
+              el.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('cursor-hover');
+                cursorOutline.classList.add('cursor-hover');
+              });
+
+              el.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('cursor-hover');
+                cursorOutline.classList.remove('cursor-hover');
+              });
+            });
+          }
+
+          // Initial hover effects
+          addHoverEffects();
+
+          // Re-add hover effects when new elements are added (for dynamically loaded content)
+          const observer = new MutationObserver(() => {
+            addHoverEffects();
+          });
+          observer.observe(document.body, { childList: true, subtree: true });
+
+          // Hide default cursor
+          document.body.style.cursor = 'none';
+
+          console.log('Custom cursor initialized successfully');
+        } catch (error) {
+          console.error('Error initializing custom cursor:', error);
+        }
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCursor);
+      } else {
+        // DOM is already ready
+        initCursor();
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
